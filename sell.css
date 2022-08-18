@@ -1,0 +1,90 @@
+color{
+    color: #4a8fe7;
+    color: #001011;
+    color: #071b36;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: poppins;
+    outline: none;
+    box-sizing: border-box;
+}
+.head{
+    width: 100%;
+    /* height: 10vh; */
+    background-color: #071b36;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    margin-top: 1%;
+    padding-top: 1%;
+}
+.unordered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.main{
+    background: url(./image\ 1.jpeg);
+    height: 90vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.425);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main1{
+    height: 70%;
+    width: 80%;
+    background-color: #071b36;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main2{
+    height: 70%;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 20px;
+}
+#inputt{
+    height: 50px;
+    width: 100%;
+    padding: 1%;
+    border-radius: 10px;
+    border-color: #001011;
+}
+#inputt::placeholder{
+    color: #001011;
+}
+.add{
+    height: 55px;
+    width: 100%;
+    padding: 1%;
+    border-radius: 10px;
+    border: 2px solid #001011;
+    display: flex;
+    gap: 150px;
+}
+.butdiv{
+    display: flex;
+    gap: 200px;
+    padding-top: 20px;
+
+    justify-content: center;
+}

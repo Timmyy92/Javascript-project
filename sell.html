@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sell.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Hurricane&family=Libre+Baskerville:ital,wght@0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100;200;300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>SELL PAGE</title>
+</head>
+
+<body>
+    <nav class="head">
+        <div>
+            <h1>PROPERTY</h1>
+        </div>
+        <ul class="unordered">
+            <li>For Sale</li>
+            <li>For Rent</li>
+            <li>Short Let</li>
+            <li>Agents</li>
+            <!-- <li><button class="but1">Post A Property <span class="free">Free</span></button></li> -->
+
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="main1">
+            <div class="main2">
+                <input id="inputt" class="housename" type="text" placeholder="House Name">
+                <input id="inputt" class="decp" type="text" placeholder="Description">
+                <input id="inputt" class="loca" type="text" placeholder="Location">
+                <input id="inputt" class="price" type="text" placeholder="Price">
+                <div class="add">Add Photo<input type="file" name="" id="file" multiple></div>
+            </div>
+            <div class="butdiv">
+                <button class="btn btn-primary" onclick="closeBut()">CLOSE</button>
+                <button class="btn btn-primary" onclick="postt()">POST</button>
+            </div>
+        </div>
+       
+    </main>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    
+    function closeBut() {
+        location.href = "index.html"
+    }
+let housename = document.querySelector('.housename');
+let Descri = document.querySelector('.decp');
+let locat = document.querySelector('.loca');
+let price = document.querySelector('.price');
+let file = document.querySelector('#file');
+let storee = [];
+let getstore = JSON.parse(localStorage.getItem('pro'));
+
+
+    function postt() {
+
+         console.log('active');
+        console.log(file.files[0], file.files[1], file.files[2]);
+
+        let filereader1 = new FileReader()
+        filereader1.readAsDataURL(file.files[0])
+        filereader1.onload = (e) => {
+            // console.log(e);
+            // console.log(filereader1.result);
+
+            localStorage.setItem('pic1', JSON.stringify(filereader1.result))
+        }
+
+        let filereader2 = new FileReader()
+        filereader2.readAsDataURL(file.files[1])
+        filereader2.onload = (e) => {
+            // console.log(e);
+            // console.log(filereader2.result);
+
+            localStorage.setItem('pic2', JSON.stringify(filereader2.result))
+        }
+
+        let filereader3 = new FileReader()
+        filereader3.readAsDataURL(file.files[2])
+        filereader3.onload = (e) => {
+            // console.log(e);
+            // console.log(filereader3.result);
+
+            localStorage.setItem('pic3', JSON.stringify(filereader3.result))
+        }
+
+     
+        let getpic1 = JSON.parse(localStorage.getItem('pic1'));
+        let getpic2 = JSON.parse(localStorage.getItem('pic2'));
+        let getpic3 = JSON.parse(localStorage.getItem('pic3'));
+
+        if (getstore != null) {
+            storee = getstore
+        }
+
+        let Obj = {
+            descript: Descri.value,
+                price: price.value,
+                location: locat.value ,
+                Housename: housename.value,
+                images: getpic1,
+                images1: getpic2,
+                images2: getpic3
+        }
+        storee.push(Obj)
+        // console.log(store);
+        localStorage.setItem('pro', JSON.stringify(storee))
+
+
+    }
+</script>

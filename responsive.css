@@ -1,0 +1,38 @@
+@media screen and (max-width:990px) {
+    .head{
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    li.nav{
+        display: none;
+    }
+    button.btn{
+        display: block;
+    }
+}
+@media screen and (max-width:769px) {
+    div.img,div.select{
+        flex-direction:column;
+    }
+    div.cardd{
+        width: 100%;
+        margin: 1rem auto;
+    }
+    div.select{
+        margin:0 auto;
+    }
+    input#input{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .text{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    footer.footer{
+        flex-direction: column;
+    }
+}

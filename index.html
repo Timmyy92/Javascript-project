@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./responsive.css">
+		<link
+			rel="stylesheet"
+			href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Hurricane&family=Libre+Baskerville:ital,wght@0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100;200;300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>REAL ESTATE</title>
+	</head>
+<style>
+	/* *{
+		border: 1px solid red;
+	} */
+</style>
+	<body>
+		<nav class="nav">
+			<div class="head">
+				<div>
+					<h1>PROPERTY</h1>
+				</div>
+				<ul class="unordered">
+					<li class="nav">Home</li>
+					<li class="nav">About</li>
+					<li class="nav" onclick="forSale()">For Sale</li>
+					<li class="nav" onclick="forRent()">For Rent</li>
+					<li>
+	 					<button class="but1" onclick="forUpload()">
+							Post A Property <span class="free">Free</span>
+						</button>
+					</li>
+					
+						<button class="btn"> 
+							|||
+						</button>
+					<!-- <li>
+						<button
+							class="but2"
+							data-bs-toggle="modal"
+							type="button"
+							data-bs-target="#exampleModal"
+						>
+							Login
+						</button>
+					</li> -->
+					<!-- <li><button class="but2" onclick="signUp()">Sign Up</button></li> -->
+				</ul>
+			</div>
+			
+
+			<div
+				class="modal fade"
+				id="exampleModal"
+				tabindex="-1"
+				aria-labelledby="exampleModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content text-dark">
+						<div class="modal-header">
+							<div
+								class="modal-title d-flex justify-content-center w-100"
+								id="exampleModalLabel"
+							>
+								Sign In
+							</div>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body">
+							<div class="form-floating mb-3">
+								<input
+									type="email"
+									class="form-control"
+									id="floatingInput"
+									placeholder="name@example.com"
+								/>
+								<label for="floatingInput">Email address</label>
+							</div>
+							<div class="form-floating">
+								<input
+									type="password"
+									class="form-control"
+									id="floatingPassword"
+									placeholder="Password"
+								/>
+								<label for="floatingPassword">Password</label>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+							<button type="button" class="btn btn-primary btn-lg form-control">
+								LOGIN
+							</button>
+							<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="background">
+			<h1 class="text">Find your next home</h1>
+
+			<div class="select">
+				<input
+					id="input"
+					type="text"
+					placeholder="Where do you want to live?"
+				/>
+				<!-- <select name="Type" id="Types" class="type">
+					<option selected value="">Type</option>
+				</select> -->
+				<div>
+					<button class="searchbut" onclick="forSale()">BUY</button>
+					<button class="searchbut" onclick="forRent()">RENT</button>
+				</div>
+               
+			</div>
+           
+		</div>
+
+		<div class="part2">
+			<h5 class="pro">FOR SALE</h5>
+			<div class="img"></div>
+			
+		</div>
+		
+		<nav class="nav">
+			<div class="head">
+				<!-- <div class="">
+					<h1>PROPERTY</h1>
+				</div>
+				<ul class="unordered">
+					<li class="foot">About Us</li>
+					<li class="foot">Contact Us</li>
+					<li class="foot">Join Us</li>
+					<li class="foot">Agents</li>
+				</ul> -->
+			</div>
+		</nav>
+		<footer class="footer">
+			<div>
+				<h3>Popular States</h3>
+				<li>Lagos</li>
+				<li>Abuja</li>
+				<li>Oyo</li>
+				<li>Rivers</li>
+				<li>Ogun</li>
+				<li>Enugu</li>
+			</div>
+			<div>
+				<h3>Popular States</h3>
+				<li>Ikeja</li>
+				<li>Abuja</li>
+				<li>Ibadan</li>
+				<li>Port Harcourt</li>
+				<li>Abeokuta</li>
+				<li>Lekki</li>
+			</div>
+			<div>
+				<h3>Popular States</h3>
+				<li>Lagos</li>
+				<li>Abuja</li>
+				<li>Oyo</li>
+				<li>Rivers</li>
+				<li>Ogun</li>
+				<li>Enugu</li>
+			</div>
+			<div>
+				<h3>Popular States</h3>
+				<li>Lagos</li>
+				<li>Abuja</li>
+				<li>Oyo</li>
+				<li>Rivers</li>
+				<li>Ogun</li>
+				<li>Enugu</li>
+			</div>
+		</footer>
+	</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
