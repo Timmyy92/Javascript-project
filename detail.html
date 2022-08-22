@@ -341,9 +341,12 @@
 	displaydetalis();
 
 	const paymentForm = document.getElementById("paymentForm");
+	let Fullname = document.querySelector('#fname');
 	paymentForm.addEventListener("submit", payWithPaystack, false);
 	function payWithPaystack(event) {
 		event.preventDefault();
+
+		localStorage.setItem('fullname', JSON.stringify(Fullname.value))
 
 		let handler = PaystackPop.setup({
 			key: "pk_test_a7af6cdea6bfe59085db2c1eb849eeefebe65aa8", // Replace with your public key
@@ -357,6 +360,7 @@
 			callback: function (response) {
 				let message = "Payment complete! Reference: " + response.reference;
 				alert(message);
+				location.href = 'invoice.html'
 			},
 		});
 

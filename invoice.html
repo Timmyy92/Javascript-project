@@ -230,7 +230,7 @@
 
             <div class="prt-div">
                 <button onclick="prinreciep()" class="printbtn">Print Reciept</button>
-                <span class="spannjus">Justproperty.com <br>  live with comfort</span>
+                <!-- <span class="spannjus">Justproperty.com <br>  live with comfort</span> -->
             </div>
         </div>
     </div>
@@ -293,33 +293,25 @@ function prinreciep() {
     let Amount = document.querySelector('.amountinput') 
     let locationa = document.querySelector('.locationinput') 
     let fnamebox = document.querySelector('.nameinput')
-    let model = document.querySelector('.mode')
+    // let model = document.querySelector('.mode')
      
-
-     let getfullname = JSON.parse(localStorage.getItem('Fullname')) 
-    //  console.log(getfullname);
-        async function fillprice() {
-            fnamebox.innerHTML = getfullname
-            await fetch(url + 'moredetail')
-                .then(e => e.json())
-                .then(data => {
-
-                    console.log(data)
-                    for (let index = 0; index < data.length; index++) {
-                        const element = data[index];
-
-                        console.log(element);
-
-                        Amount.innerHTML = `${element.price}`
-                        locationa.innerHTML = `${element.location}`
-                        model.innerHTML = `${element.mode}`
-                        refno.innerHTML = reffno
-                    }
-                })
+    let getmoree = JSON.parse(localStorage.getItem("more"));
+     let getfullname = JSON.parse(localStorage.getItem('fullname')) 
+     console.log(getfullname);
+     console.log(getmoree);
 
 
-            }
-            fillprice()
+     function recieptt() {
+         fnamebox.innerHTML = getfullname
+         refno.innerHTML = reffno
+         Amount.innerHTML = `${getmoree.price}`
+         locationa.innerHTML = `${getmoree.location}`
+
+        
+     }
+
+     recieptt()
+      
 
 
    function btnhome() {

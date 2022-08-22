@@ -66,20 +66,29 @@ color{
     height: 50px;
     width: 100%;
     padding: 1%;
+    border: 1px solid;
     border-radius: 10px;
     border-color: #001011;
 }
 #inputt::placeholder{
-    color: #001011;
+    color: #00101185;
+    
+}
+#inputt:hover{
+    outline: 2px solid #001011;
 }
 .add{
     height: 55px;
     width: 100%;
     padding: 1%;
     border-radius: 10px;
-    border: 2px solid #001011;
+    border: 1px solid #001011;
     display: flex;
     gap: 150px;
+    color: #00101185;
+}
+.add:hover{
+    border: 3px solid #001011;
 }
 .butdiv{
     display: flex;

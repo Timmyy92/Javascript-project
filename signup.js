@@ -80,14 +80,14 @@ function createAccount(event) {
        let getuser = JSON.parse(localStorage.getItem('signup'))
        console.log(getuser);
 
-       let userdata = getuser.find(f => {
-           return f.email === email.value 
-       })
-       if (userdata) {
-           alert('Aleady existing Account')
-           return
-       }
-       else {
+    //    let userdata = getuser.find( f => {
+    //        return f.email === email.value 
+    //    })
+    //    if (userdata) {
+    //        alert('Aleady existing Account')
+    //        return
+    //    }
+    //    else {
         arr.push({
             firstname: firstName.value,
             surname: lastName.value,
@@ -107,7 +107,7 @@ function createAccount(event) {
     
        
     
-   }
+//    }
 }
 let modalOpen = false
 

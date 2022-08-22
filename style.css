@@ -99,8 +99,8 @@ li.nav {
 }
 #input::placeholder {
 	color: var(--sec-color);
-	font-size: large;
-	font-weight: 400;
+	font-size: 1rem;
+	font-weight: 200;
 }
 .select {
 	display: flex;
@@ -136,10 +136,13 @@ button.btn {
 	width: 130px;
 	background: #4a8fe7;
 	color: white;
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 300;
 	border: none;
 	border-radius: 10px;
+}
+.searchbut:hover{
+	background-color: #1a68ce;
 }
 
 .pro {
